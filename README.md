@@ -47,7 +47,10 @@ Example of how to interpoate data by replacing ondata within flight lines datase
 
 - raster2array():   convert Raster to array
 - getNoDataValue(): Get no data value of array
-- 
+- extract_data(): Extracting the flight line data from the whole datasets
+- interpolation(): Interpolation in the new array
+- conversion_back(): transfer the value from newarray to the old array
+
 
 ## Task3.py
 Example of how to analyse the region where both overlap nad determine the total volume between the two dates.The following methods are added:
