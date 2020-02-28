@@ -48,3 +48,28 @@ Example of how to interpoate data by replacing ondata within flight lines datase
 - raster2array():   convert Raster to array
 - getNoDataValue(): Get no data value of array
 - 
+
+## Task3.py
+Example of how to analyse the region where both overlap nad determine the total volume between the two dates.The following methods are added:
+
+- readfiles():  Read files into list
+- overlay():    Function to find intersection of two 2D arrays and calculate the change of elevations between 2009 and 2015
+
+The data should be read as:
+
+    afile = '/geos/netdata/avtrain/data/3d/oosa/assignment/lvis/2015/x.list'
+    afilename = '/geos/netdata/avtrain/data/3d/oosa/assignment/lvis/2015/' 
+    
+    bfile = '/home/s1982773/OOSA/src (copy)/2009_x.list'
+    bfilename = '/geos/netdata/avtrain/data/3d/oosa/assignment/lvis/2009/'
+    
+    a = readfiles(afile,afilename)
+    b = readfiles(bfile,bfilename)
+## Task4.py
+Example of how to produce an image of the DEM (2009 and 2015) overlayed with contour lines.The following methods are added:
+
+- sortZ():                  Function to make sure each z is int for the following calculation
+- contour_lines_range():    Function to determine interval by user and set each value based on the interval
+- plot_contour_line():      Function to plot contour line 
+
+    
