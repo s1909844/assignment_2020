@@ -22,13 +22,13 @@ if __name__=="__main__":
   k = 0
 
   # set some bounds
-  for i in range(15):
-      for j in range(15):
-          x0=(b.bounds[2]-b.bounds[0])*i/15 + b.bounds[0]
-          y0=(b.bounds[3]-b.bounds[1])*j/15 + b.bounds[1]
-          x1=(b.bounds[2]-b.bounds[0])*(i+1)/15+b.bounds[0]
-          y1=(b.bounds[3]-b.bounds[1])*(j+1)/15+b.bounds[1]
-
+  gap = 15
+  for i in range(gap):
+      for j in range(gap):
+          x0=(b.bounds[2]-b.bounds[0])*i/gap + b.bounds[0]
+          y0=(b.bounds[3]-b.bounds[1])*j/gap + b.bounds[1]
+          x1=(b.bounds[2]-b.bounds[0])*(i+1)/gap+b.bounds[0]
+          y1=(b.bounds[3]-b.bounds[1])*(j+1)/gap+b.bounds[1]
     
           c = lvisGround(filename,minX=x0,minY=y0,maxX=x1,maxY=y1)
           
