@@ -28,4 +28,23 @@ Setting how many parts are divided before processing
               y0=(b.bounds[3]-b.bounds[1])*j/gap + b.bounds[1]
               x1=(b.bounds[2]-b.bounds[0])*(i+1)/gap+b.bounds[0]
               y1=(b.bounds[3]-b.bounds[1])*(j+1)/gap+b.bounds[1]
+
+## Task2_1.py
+A further version of the Task1.py. It can be used to combine multiple flight lines and merge a whole line in 2015.
+
+### usage example
+put the filenames into a text file
+
+    listfile='/geos/netdata/avtrain/data/3d/oosa/assignment/lvis/2015/x.list'
+    files = []
+    with open(listfile,'r') as f:
+          for line in f:
+              filename='/geos/netdata/avtrain/data/3d/oosa/assignment/lvis/2015/' + line
+              files.append(filename.strip())
               
+## Task2_2.py
+Example of how to interpoate data by replacing ondata within flight lines datasets.The following methods are added:
+
+- raster2array():   convert Raster to array
+- getNoDataValue(): Get no data value of array
+- 
