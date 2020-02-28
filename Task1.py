@@ -38,8 +38,9 @@ if __name__=="__main__":
               
           else:
               k = k + 1
-              epsg = 3031
-              c.reproject(4326,epsg)
+              outepsg = 3031
+              inpepsg = 4326
+              c.reproject(inpepsg,epsg)
               if(k==1):                 # if it is the first part of data
                   
                 
@@ -78,4 +79,4 @@ if __name__=="__main__":
   tiff = tiffHandle(filename,minX,minY,maxX,maxY,nx,ny,x,y)
   new_filename = 'task1_1.tif'
   f=h5py.File(filename,'r')
-  tiff.writeTiff(data,res,new_filename,epsg)
+  tiff.writeTiff(data,res,new_filename,outepsg)
