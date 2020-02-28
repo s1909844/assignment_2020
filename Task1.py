@@ -1,7 +1,3 @@
-
-
-
-
 from pyproj import Proj, transform # package for reprojecting data
 from processLVIS import lvisGround
 from handleTiff import tiffHandle
